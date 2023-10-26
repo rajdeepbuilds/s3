@@ -89,16 +89,6 @@ const Navbar = () => {
               <li className="hack4bengal__navbar-navitem">
                 <p
                   onClick={() => {
-                    gotoId("venue");
-                    toggleMenu();
-                  }}
-                >
-                  <h3 className="hack4bengal__navbar-menu-heading">Venue</h3>
-                </p>
-              </li>
-              <li className="hack4bengal__navbar-navitem">
-                <p
-                  onClick={() => {
                     gotoId("timeline");
                     toggleMenu();
                   }}
@@ -106,11 +96,21 @@ const Navbar = () => {
                   <h3 className="hack4bengal__navbar-menu-heading">Timeline</h3>
                 </p>
               </li>
-              <li className="hack4bengal__navbar-navitem">
+              {/* <li className="hack4bengal__navbar-navitem">
+                <p
+                  onClick={() => {
+                    gotoId("venue");
+                    toggleMenu();
+                  }}
+                >
+                  <h3 className="hack4bengal__navbar-menu-heading">Venue</h3>
+                </p>
+              </li> */}
+              {/* <li className="hack4bengal__navbar-navitem">
                 <Link to={"/live"}>
                   <h3 className="hack4bengal__navbar-menu-heading">Live</h3>
                 </Link>
-              </li>
+              </li> */}
 
               <li className="hack4bengal__navbar-navitem">
                 <p
@@ -250,53 +250,47 @@ const Navbar = () => {
             isOpen ? `activeMenu slide-bottom` : ``
           }`}
         >
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("home");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Home
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("home");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">Home</h3>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("aboutus");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                About Us
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("aboutus");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">
+              About Us
+            </h3>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("venue");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Venue
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("venue");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">
+              Venue
+            </h3>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("timeline");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Timeline
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("timeline");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">
+              Timeline
+            </h3>
           </li>
           <li className="hack4bengal__navbar-hamburger-navitem">
             <Link to={"/live"}>
@@ -305,73 +299,67 @@ const Navbar = () => {
               </h3>
             </Link>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("themes");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Themes
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("themes");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">
+              Themes
+            </h3>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("prizes");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Prizes
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("prizes");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">
+              Prizes
+            </h3>
           </li>
-
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("judges");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Mentors
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("mentors");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">
+              Mentors
+            </h3>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <Link to={"/live"}>
+          <li onClick={()=>{
+            gotoId("testimonials");
+            toggleMenu();
+          }} className="hack4bengal__navbar-hamburger-navitem">
+            
               <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Live
+                Testimonials
               </h3>
-            </Link>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("sponsors");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                Sponsors
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("sponsors");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">
+              Sponsors
+            </h3>
           </li>
-          <li className="hack4bengal__navbar-hamburger-navitem">
-            <p
-              onClick={() => {
-                gotoId("faq");
-                toggleMenu();
-              }}
-            >
-              <h3 className="hack4bengal__navbar-hamburger-menu-heading">
-                FAQ
-              </h3>
-            </p>
+          <li
+            onClick={() => {
+              gotoId("faq");
+              toggleMenu();
+            }}
+            className="hack4bengal__navbar-hamburger-navitem"
+          >
+            <h3 className="hack4bengal__navbar-hamburger-menu-heading">FAQ</h3>
           </li>
         </ul>
       </header>
